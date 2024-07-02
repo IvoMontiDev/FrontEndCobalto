@@ -1,4 +1,4 @@
-const API_SERVER = 'http://localhost:3000/api';
+const API_SERVER = 'https://ivomontidev.alwaysdata.net/api';
 
 const cargarPeliculasTendencia = async (page = 1) => {
     try {
