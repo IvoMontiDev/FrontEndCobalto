@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Película | CAC-Movies</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilosDel.css">
+</head>
+<body class="bodyAgregarPelicula">
+    <header class="header">
+        <nav class="navegacion">
+            <a class="anclaLogo" href="#">
+                <i class="fas fa-film" aria-hidden="true"></i>
+                <span>CAC-Movies</span>
+            </a>
+            <ul class="listaNav">
+                <li class="listaItem"><a class="linkNav iniciarSesion" href="./delete.html">Volver</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" class="main">
+        <section data-aos="zoom-in" data-aos-duration="1000" class="seccionAgregarPelicula">
+            <form id="formulario">
+                <h2 class="tituloAgregarPelicula">Agregar Película</h2>
+                <div>
+                    <input type="text" placeholder="Título" id="title" name="title" required>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <textarea placeholder="Descripción" id="description" name="description" required></textarea>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="date" placeholder="Fecha de Estreno (dd/mm/aaaa)" id="release_date" name="release_date" required>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="text" id="poster_url" name="poster_url" placeholder="URL del Póster" required>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Director" id="director" name="director" required>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="text" placeholder="Reparto (Separado por comas)" id="cast" name="cast" required>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="number" placeholder="Edad mínima recomendada" id="minimum_age" name="minimum_age" required>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <select name="genre_id" id="genre_id" required>
+                        <option value="">Selecciona un género</option>
+                        <option value="1">Action</option>
+                        <option value="2">Adventure</option>
+                        <option value="3">Animation</option>
+                        <option value="4">Comedy</option>
+                        <option value="5">Crime</option>
+                        <option value="6">Documentary</option>
+                        <option value="7">Drama</option>
+                        <option value="8">Family</option>
+                        <option value="9">Fantasy</option>
+                        <option value="10">History</option>
+                        <option value="11">Horror</option>
+                        <option value="12">Music</option>
+                        <option value="13">Mystery</option>
+                        <option value="14">Romance</option>
+                        <option value="15">Science Fiction</option>
+                        <option value="16">Thriller</option>
+                        <option value="17">TV Movie</option>
+                        <option value="18">War</option>
+                        <option value="19">Western</option>
+                        <!-- Agrega las opciones de género correspondientes con los valores correctos -->
+                    </select>
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input class="boton" type="submit" value="Agregar Película">
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="../js/valida_agregar_pelicula.js"></script>
+</body>
+</html>
+
+

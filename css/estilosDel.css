@@ -1,0 +1,82 @@
+/* Estilos para la sección de películas */
+.peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar elementos dentro del contenedor flex */
+    gap: 20px;
+    margin-top: 20px;
+    
+}
+
+
+.movie-item {
+    width: 250px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* Espacio inferior entre elementos */
+    flex: 1 0 250px; /* Ancho mínimo y máximo de 250px */
+}
+
+.movie-item:hover {
+    transform: translateY(-5px);
+}
+
+.movie-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.movie-title {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.delete-button {
+    background-color: #9f3647;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0 0 10px 10px; /* Bordes redondeados solo en la parte inferior */
+}
+
+.delete-button:hover {
+    background-color: #6d0016;
+}
+
+
+/* Estilos para los divs hijos de .pelicula */
+#tendencias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinear elementos al principio */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+/* Estilos para centrar y ajustar el formulario */
+#formulario {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: auto; /* Ajusta el margen izquierdo */
+    margin-right: auto; /* Ajusta el margen derecho */
+    max-width: 600px; /* Ajusta el ancho máximo si es necesario */
+    padding: 20px; /* Añade espacio interno al formulario */
+    /*  background-color:   Color de fondo opcional */
+    /* border-radius: 10px;  Borde redondeado opcional */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  Sombra opcional */
+}
