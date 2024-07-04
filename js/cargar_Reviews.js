@@ -6,6 +6,7 @@ const cargarReviews = async () => {
         }
 
         const reviews = await response.json();
+        console.log(reviews)
 
         // Asegúrate de que `reviews` es un array
         const reviewsArray = Array.isArray(reviews) ? reviews : [reviews];
