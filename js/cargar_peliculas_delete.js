@@ -24,7 +24,7 @@ const cargarPeliculasParaEliminar = async () => {
 
             const movieImage = document.createElement('img');
             movieImage.classList.add('movie-image');
-            movieImage.src = '../' + movie.poster_path; // Ajusta el path según tu estructura de datos
+            movieImage.src =  movie.poster_path; // Ajusta el path según tu estructura de datos
             movieImage.alt = movie.title;
 
             const deleteButton = document.createElement('button');
