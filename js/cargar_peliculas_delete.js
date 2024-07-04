@@ -42,7 +42,7 @@ const cargarPeliculasParaEliminar = async () => {
                     movieItem.remove();
                 } catch (error) {
                     console.error('Error eliminando la película:', error);
-                    window.location.reload();
+
                 }
             };
 
