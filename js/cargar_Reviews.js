@@ -7,7 +7,6 @@ const cargarReviews = async () => {
 
         const reviews = await response.json();
 
-        // Asegúrate de que `reviews` es un array
         const reviewsArray = Array.isArray(reviews) ? reviews : [reviews];
 
         const aclamadasContainer = document.getElementById('aclamadasContainer');
@@ -16,22 +15,26 @@ const cargarReviews = async () => {
         reviewsArray.forEach(review => {
             const reviewDiv = document.createElement('div');
             reviewDiv.classList.add('review');
-            reviewDiv.style.marginBottom = '20px'; // Espacio inferior entre las reviews
+            // Estilos
+            reviewDiv.style.marginBottom = '20px'; 
             reviewDiv.style.padding = '10px';
-            reviewDiv.style.border = '1px solid #ccc'; // Borde opcional para mejor visibilidad
-            reviewDiv.style.borderRadius = '5px'; // Bordes redondeados opcionales
+            reviewDiv.style.border = '1px solid #ccc'; 
+            reviewDiv.style.borderRadius = '5px'; 
             reviewDiv.style.margin = "1vw";
 
             const movieTitle = document.createElement('h4');
             movieTitle.textContent = `Película: ${review.movie_title}`;
-            movieTitle.style.marginBottom = '10px'; // Espacio inferior entre el título y el resto
+            // Estilos
+            movieTitle.style.marginBottom = '10px'; 
 
             const userName = document.createElement('p');
             userName.textContent = `Usuario: ${review.nombre}`;
-            userName.style.margin = '5px 0'; // Espacio superior e inferior para los párrafos
+            // Estilos
+            userName.style.margin = '5px 0'; 
 
             const rating = document.createElement('p');
-            rating.style.margin = '5px 0'; // Espacio superior e inferior para los párrafos
+            // Estilos
+            rating.style.margin = '5px 0'; 
 
             // Añadir estrellas según el rating
             if (review.rating > 0 && review.rating <= 5) {
@@ -43,7 +46,8 @@ const cargarReviews = async () => {
 
             const comment = document.createElement('p');
             comment.textContent = `${review.comment}`;
-            comment.style.margin = '5px 0'; // Espacio superior e inferior para los párrafos
+            // Estilos
+            comment.style.margin = '5px 0'; 
 
             reviewDiv.appendChild(movieTitle);
             reviewDiv.appendChild(userName);

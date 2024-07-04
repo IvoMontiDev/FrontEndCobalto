@@ -24,7 +24,7 @@ const cargarPeliculasTendencia = async (page = 1) => {
             
             const img = document.createElement('img');
             img.classList.add('imgTendencia');
-            img.src = movie.poster_path; // Asegúrate de que el path es correcto
+            img.src = movie.poster_path; 
             img.alt = movie.title;
             img.loading = 'lazy';
             

@@ -24,7 +24,7 @@ const cargarPeliculasParaEliminar = async () => {
 
             const movieImage = document.createElement('img');
             movieImage.classList.add('movie-image');
-            movieImage.src =  movie.poster_path; // Ajusta el path según tu estructura de datos
+            movieImage.src =  movie.poster_path; 
             movieImage.alt = movie.title;
 
             const deleteButton = document.createElement('button');
@@ -38,7 +38,7 @@ const cargarPeliculasParaEliminar = async () => {
                         const errorText = await deleteResponse.text();
                         throw new Error(`HTTP error! status: ${deleteResponse.status}, details: ${errorText}`);
                     }
-                    // Remove movie from list after deletion
+                    // Borrs movie de la lista despues de eliminarla
                     movieItem.remove();
                 } catch (error) {
                     console.error('Error eliminando la película:', error);
@@ -46,7 +46,7 @@ const cargarPeliculasParaEliminar = async () => {
                 }
             };
 
-            movieItem.appendChild(movieImage); // Agregar imagen
+            movieItem.appendChild(movieImage); 
             movieItem.appendChild(movieTitle);
             movieItem.appendChild(deleteButton);
             moviesList.appendChild(movieItem);

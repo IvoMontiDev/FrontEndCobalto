@@ -1,4 +1,3 @@
-// editar_pelicula.js
 
 document.addEventListener('DOMContentLoaded', async function() {
     const selectMovie = document.getElementById('selectMovie');
@@ -64,7 +63,6 @@ async function loadSelectedMovie(movieId) {
         document.getElementById('editGenreId').value = movie.genre_id;
     } catch (error) {
         console.error('Error al cargar la película seleccionada:', error);
-        // Mostrar mensaje de error al usuario si es necesario
     }
 }
 
@@ -98,8 +96,6 @@ try {
     const updatedMovie = await response.json();
     console.log('Película actualizada exitosamente:', updatedMovie);
 
-    // Opcional: Mostrar mensaje de éxito al usuario o redireccionar
 } catch (error) {
     console.error('Error al actualizar la película:', error);
-    // Mostrar mensaje de error al usuario si es necesario
 }}
