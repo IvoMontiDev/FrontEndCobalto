@@ -16,7 +16,7 @@ document.getElementById('formulario').addEventListener('submit', async function(
     console.log('Data being sent:', data);
 
     try {
-        const response = await fetch('https://ivomontidev.alwaysdata.net/api/movies', {
+        const response = await fetch('https://ivomontidev.alwaysdata.net/api/movies/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

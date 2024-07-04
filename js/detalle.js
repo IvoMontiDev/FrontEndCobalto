@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Actualizar el DOM con los datos de la película
                 document.getElementById('titulo').textContent = title || 'Título no disponible';
-                document.getElementById('poster').setAttribute('src', `../${poster_path}`);
+                document.getElementById('poster').setAttribute('src', `${poster_path}`);
                 document.getElementById('fechaGeneros').textContent = `Fecha de lanzamiento: ${release_date || 'Fecha no disponible'}`;
                 document.getElementById('descripcion').textContent = description || 'Descripción no disponible';
                 document.getElementById('director').textContent = director || 'Director no disponible';
